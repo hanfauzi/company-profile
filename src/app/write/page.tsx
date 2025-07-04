@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { axiosInstance } from "@/lib/axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Trash } from "lucide-react";
 import Image from "next/image";
@@ -43,10 +42,10 @@ const Write = () => {
     setFieldValue("thumbnail", null);
   };
 
-  const { mutateAsync: createBlog, isPending} = useCreateBlog();
+  const { mutateAsync: createBlog, isPending } = useCreateBlog();
 
   return (
-    <main className="container pb-20 mx-auto px-4">
+    <main className="container mx-auto px-4 pb-20">
       <Formik
         initialValues={{
           title: "",
@@ -154,7 +153,6 @@ const Write = () => {
               <Button type="submit" disabled={isPending}>
                 {isPending ? "Loading" : "Submit"}
               </Button>
-              
             </div>
           </Form>
         )}

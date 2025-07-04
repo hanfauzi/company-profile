@@ -2,7 +2,6 @@ import { axiosInstance } from "@/lib/axios";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
-import { array } from "yup";
 
 interface Payload {
   title: string;
@@ -19,10 +18,10 @@ const useCreateBlog = () => {
   return useMutation({
     mutationFn: async (payload: Payload) => {
       const form = new FormData();
-
       form.set("file", payload.thumbnail!);
 
       const randomId = Date.now() + Math.floor(Math.random() * 1000);
+
       const resultThumbnail = await axiosInstance.post<{
         fileURL: string;
         filePath: string;
@@ -30,8 +29,6 @@ const useCreateBlog = () => {
         `/api/files/blog-images/${randomId}`, // blog-images -> path folder
         form
       );
-
-      // response body-> {fileURL: string, filePath: string}
 
       await axiosInstance.post("/api/data/Blogs", {
         title: payload.title,
@@ -41,9 +38,9 @@ const useCreateBlog = () => {
         thumbnail: resultThumbnail.data.fileURL,
       });
     },
-    onSuccess: async() => {
+    onSuccess: async () => {
       alert("create blog success");
-      await queryClient.invalidateQueries({queryKey: ["blogs"]})
+      await queryClient.invalidateQueries({ queryKey: ["blogs"] });
       router.push("/");
     },
     onError: (error: AxiosError<{ message: string; code: number }>) => {
