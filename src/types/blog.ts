@@ -9,4 +9,5 @@ export interface Blog {
   updated: number | null;
   ownerId: string | null;
   ___class: string;
+  author:string
 }

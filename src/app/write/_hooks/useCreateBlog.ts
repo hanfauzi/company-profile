@@ -9,6 +9,7 @@ interface Payload {
   description: string;
   content: string;
   thumbnail: File | null;
+  author: string;
 }
 
 const useCreateBlog = () => {
@@ -36,6 +37,7 @@ const useCreateBlog = () => {
         description: payload.description,
         content: payload.content,
         thumbnail: resultThumbnail.data.fileURL,
+        author: payload.author
       });
     },
     onSuccess: async () => {
