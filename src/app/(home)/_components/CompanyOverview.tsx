@@ -4,42 +4,42 @@ const timelineData = [
   {
     year: "2019",
     title: "Founded in Jakarta, Indonesia",
-    imageSrc: "/",
+    imageSrc: "/kantor.jpg",
     description:
       "ARUNIKA was established by a group of tech enthusiasts aiming to make quality digital solutions accessible to local businesses.",
   },
   {
     year: "2020",
     title: "First Major Client & Expansion",
-    imageSrc: "/",
+    imageSrc: "/client.jpg",
     description:
       "Secured our first enterprise client in the retail sector and expanded the team from 4 to 10 engineers.",
   },
   {
     year: "2021",
     title: "Diversification of Services",
-    imageSrc: "/",
+    imageSrc: "/diversity.jpg",
     description:
       "Introduced cloud infrastructure consulting and UI/UX design services to support growing client needs.",
   },
   {
     year: "2022",
     title: "Going Regional",
-    imageSrc: "/",
+    imageSrc: "/expansion.jpg",
     description:
       "Completed cross-border projects in Southeast Asia, particularly in Singapore and Malaysia.",
   },
   {
     year: "2023",
     title: "Product Launch & Strategic Partnerships",
-    imageSrc: "/",
+    imageSrc: "/product.jpg",
     description:
       "Launched an internal SaaS productivity tool for SMEs and formed partnerships with AWS and Google Cloud.",
   },
   {
     year: "2024",
     title: "Scaling Up",
-    imageSrc: "/",
+    imageSrc: "/office.jpg",
     description:
       "ARUNIKA grew to a team of 50+, serving over 30 clients globally in e-commerce, fintech, and healthcare.",
   },
@@ -47,7 +47,7 @@ const timelineData = [
 
 const CompanyOverview = () => {
   return (
-    <section className="container mx-auto px-6 md:px-20 py-16 md:py-[20vh] font-[Montserrat]">
+    <section className="container  mx-auto px-6 md:px-20 py-16 md:py-[20vh] font-[Montserrat]">
       <div className="flex flex-col gap-16 md:gap-20">
         {/* Overview */}
         <div>

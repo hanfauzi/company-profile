@@ -3,7 +3,8 @@ const services = [
     title: "Tech Consulting",
     description:
       "Strategic consulting to help businesses identify, design, and implement impactful technology solutions.",
-    pricing: "Custom pricing based on project scope",
+    pricing:
+      "Custom pricing based on project scope (starts from IDR 25,000,000)",
     testimonial: {
       author: "Dewi Kartika – COO, RetailHub",
       quote:
@@ -14,7 +15,7 @@ const services = [
     title: "Software Development",
     description:
       "Custom web and mobile application development tailored to your business needs.",
-    pricing: "Starts from $5,000 per project",
+    pricing: "Starts from IDR 80,000,000 per project",
     testimonial: {
       author: "Fahmi Rizky – Founder, MedikaApp",
       quote:
@@ -25,7 +26,7 @@ const services = [
     title: "Cloud Solutions",
     description:
       "Cloud infrastructure migration and optimization for maximum scalability and efficiency.",
-    pricing: "Monthly plans starting at $500",
+    pricing: "Monthly plans starting at IDR 8,000,000",
     testimonial: {
       author: "Maya Lee – CTO, LogiTrack",
       quote:
@@ -36,7 +37,7 @@ const services = [
     title: "UI/UX Design",
     description:
       "User-centered interface and experience design focused on usability, aesthetics, and performance.",
-    pricing: "From $1,500 per sprint",
+    pricing: "From IDR 25,000,000 per sprint",
     testimonial: {
       author: "Kevin Tan – Product Manager, FinNow",
       quote:
@@ -47,7 +48,7 @@ const services = [
 
 const Services = () => {
   return (
-     <section className="container mx-auto px-6 md:px-20 py-20 space-y-20">
+    <section className="container mx-auto px-6 md:px-20 py-20 space-y-20 font-[Montserrat]">
       <div className="text-center mb-10">
         <h2 className="text-2xl font-bold">
           What We Build, We Build With Purpose
@@ -61,8 +62,8 @@ const Services = () => {
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h2 className="text-3xl font-bold">Our Core Services</h2>
         <p className="text-muted-foreground">
-          Reliable, scalable, and tailored for your business — here&apos;s what we
-          offer.
+          Reliable, scalable, and tailored for your business — here&apos;s what
+          we offer.
         </p>
       </div>
 
@@ -87,7 +88,7 @@ const Services = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

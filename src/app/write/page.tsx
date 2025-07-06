@@ -4,7 +4,7 @@ import Writeblog from "./_components/Writeblog";
 const WritePage = () => {
   
   return (
-    <section>
+    <section className="text-[#393E46]">
       <Writeblog />
     </section>
   );

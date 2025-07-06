@@ -19,15 +19,15 @@ const SignIn = () => {
   const { mutateAsync: login, isPending } = useLogin();
 
   return (
-    <main className="container mx-auto px-6 md:px-20 py-20 space-y-12">
-      <Card className="w-full max-w-sm mx-auto mt-24">
+    <main className="container font-[Montserrat] h-[83vh] mx-auto px-6 md:px-20 py-20 space-y-12 ">
+      <Card className="w-full max-w-sm mx-auto mt-24 border rounded-2xl ">
         <Formik
           initialValues={{ email: "", password: "" }}
           onSubmit={async (values) => {
             await login({ login: values.email, password: values.password });
           }}
         >
-          <Form className="space-y-4">
+          <Form className="space-y-4 text-[#393E46]">
             <CardHeader>
               <CardTitle>Login to your account</CardTitle>
               <CardDescription>
@@ -70,7 +70,7 @@ const SignIn = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="w-full" disabled={isPending}>
+              <Button type="submit" className="w-full bg-[#393E46]" disabled={isPending}>
                 {isPending ? <Loader className="animate-spin" /> : "Login"}
               </Button>
             </CardFooter>

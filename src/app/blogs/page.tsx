@@ -30,7 +30,7 @@ const blogs = [
 
 const BlogListPage = () => {
   return (
-    <section className="container mx-auto px-6 md:px-20 py-20 space-y-12">
+    <section className="container font-[Montserrat] text-[#393E46] mx-auto px-6 md:px-20 py-20 space-y-12 ">
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h2 className="text-3xl font-bold">Insights & Stories from ARUNIKA</h2>
         <p className="text-muted-foreground">

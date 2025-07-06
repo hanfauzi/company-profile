@@ -2,7 +2,7 @@ import Aboutus from "./_components/Aboutus";
 
 const AboutPage = () => {
   return (
-    <section>
+    <section className="text-[#393E46]"> 
      <Aboutus />
     </section>
   );

@@ -10,7 +10,7 @@ const BlogBody: FC<BlogBodyProps> = async ({ objectId }) => {
   const blog = await getBlog(objectId);
 
   return (
-    <section className="mt-8">
+    <section className="mt-8 font-[Montserrat]">
       <Markdown content={blog.content} />
     </section>
   );

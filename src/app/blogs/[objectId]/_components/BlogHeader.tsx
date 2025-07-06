@@ -12,7 +12,7 @@ const BlogHeader: FC<BlogHeaderProps> = async ({ objectId }) => {
   const blog = await getBlog(objectId);
 
   return (
-    <section className="space-y-2">
+    <section className="space-y-2 font-[Montserrat]">
       <Badge variant="outline" className="bg-green-100 capitalize">
         {blog.category}
       </Badge>

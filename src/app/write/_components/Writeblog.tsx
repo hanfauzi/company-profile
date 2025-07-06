@@ -49,7 +49,7 @@ const WriteBlog = () => {
 
 
   return (
-    <main className="container mx-auto px-6 md:px-20 py-20 space-y-20">
+    <main className="container mx-auto px-6 md:px-20 py-20 space-y-20 font-[Montserrat]">
       <Formik
         initialValues={{
           title: "",

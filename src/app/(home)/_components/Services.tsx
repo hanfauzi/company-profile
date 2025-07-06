@@ -65,7 +65,7 @@ const Services = () => {
       {/* Call to Action Button */}
       <div className="mt-8 text-left">
         <Link href="/services">
-          <Button>Learn More About Our Services</Button>
+          <Button className="bg-[#393E46]">Learn More About Our Services</Button>
         </Link>
       </div>
     </section>

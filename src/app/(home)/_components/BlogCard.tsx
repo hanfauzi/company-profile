@@ -12,7 +12,7 @@ interface BlogCardProps {
 const BlogCard: FC<BlogCardProps> = ({ blog }) => {
   return (
     <Link href={`/blogs/${blog.objectId}`}>
-      <Card className="hover:shadow-md transition-all">
+      <Card className="hover:shadow-md transition-all border rounded-2xl">
         <CardHeader>
           <div className="relative w-full h-[200px] rounded-lg overflow-hidden">
             <Image
