@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const servicesData = [
   {
@@ -30,54 +31,42 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className=" container mx-auto py-[20vh] px-20 h-[100vh]">
-      <div className="grid md:grid-cols-2 gap-10">
-        {/* Kiri*/}
-        <div className="sticky top-20 self-start">
-          <h3 className="text-2xl font-bold">Our Core Services</h3>
-          <p className="text-gray-600 mt-2">
+    <section className="container mx-auto py-16 md:py-[20vh] px-6 md:px-20 font-[Montserrat]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Mobile Title & Desc */}
+        <div className="block md:hidden">
+          <h3 className="text-xl font-bold">Our Core Services</h3>
+          <p className="text-sm text-gray-600 mt-2">
             What we deliver to drive your digital growth.
           </p>
         </div>
 
-        {/* Kanan */}
+        {/* Desktop Title & Desc (sticky) */}
+        <div className="hidden md:block sticky top-20 self-start">
+          <h3 className="text-2xl font-bold">Our Core Services</h3>
+          <p className="text-base text-gray-600 mt-2">
+            What we deliver to drive your digital growth.
+          </p>
+        </div>
 
+        {/* Service Cards */}
         <div className="grid gap-6">
-          <div className="border rounded-xl p-6">
-            <h4 className="font-semibold text-lg">Tech Consulting</h4>
-            <p className="text-sm mt-2">
-              Strategic consulting to help businesses identify, design, and
-              implement impactful technology solutions.
-            </p>
-          </div>
-
-          <div className="border rounded-xl p-6">
-            <h4 className="font-semibold text-lg">Software Development</h4>
-            <p className="text-sm mt-2">
-              Custom web and mobile application development tailored to your
-              business needs.
-            </p>
-          </div>
-
-          <div className="border rounded-xl p-6">
-            <h4 className="font-semibold text-lg">Cloud Solutions</h4>
-            <p className="text-sm mt-2">
-              Cloud infrastructure migration and optimization for maximum
-              scalability and efficiency.
-            </p>
-          </div>
-
-          <div className="border rounded-xl p-6">
-            <h4 className="font-semibold text-lg">UI/UX Design</h4>
-            <p className="text-sm mt-2">
-              User-centered interface and experience design focused on
-              usability, aesthetics, and performance.
-            </p>
-          </div>
+          {servicesData.map((service, idx) => (
+            <div key={idx} className="border rounded-xl p-6">
+              <h4 className="font-semibold text-base md:text-lg">
+                {service.title}
+              </h4>
+              <p className="text-sm mt-2 text-gray-700">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Call to Action Button */}
       <div className="mt-8 text-left">
-        <Button>Learn More About Our Services</Button>
+        <Link href="/services">
+          <Button>Learn More About Our Services</Button>
+        </Link>
       </div>
     </section>
   );

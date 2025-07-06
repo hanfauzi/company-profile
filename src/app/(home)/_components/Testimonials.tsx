@@ -37,36 +37,37 @@ const Testimonials = () => {
         "Reliable, innovative, and deeply technical — that’s how I’d describe ARUNIKA. We’ll definitely work with them again.",
     },
   ];
+
   return (
-    <section className="container mx-auto py-[20vh] px-20 h-[100vh] ">
+    <section className="container mx-auto py-16 md:py-[20vh] px-6 md:px-20 font-[Montserrat]">
       <div className="flex flex-col gap-10">
+        {/* Title & Subtitle */}
         <div>
-          <h3 className="text-2xl font-bold">Our Testimonials</h3>
-          <p className="text-gray-600 mt-2">
+          <h3 className="text-xl md:text-2xl font-bold">Our Testimonials</h3>
+          <p className="text-sm md:text-base text-gray-600 mt-2">
             What Our Clients Say About Working with ARUNIKA.
           </p>
         </div>
 
-        <div>
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:grid-rows-2">
-            {testimonials.map((item, i) => (
-              <li
-                key={i}
-                className="md:[grid-column:span_6] xl:[grid-column:span_4] list-none border rounded-xl p-6 flex flex-col justify-between"
-              >
-                <blockquote className="mt-6 border-l-2 pl-4 text-sm md:text-base text-muted-foreground mb-4 italic">
-                  “{item.feedback}”
-                </blockquote>
-                <div>
-                  <h4 className="font-semibold text-sm md:text-base text-black dark:text-white">
-                    {item.name}
-                  </h4>
-                  <p className="text-xs text-gray-500">{item.position}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Testimonials Grid */}
+        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          {testimonials.map((item, i) => (
+            <li
+              key={i}
+              className="list-none border rounded-xl p-6 flex flex-col justify-between"
+            >
+              <blockquote className="mt-2 border-l-2 pl-4 text-sm md:text-base text-muted-foreground mb-4 italic">
+                “{item.feedback}”
+              </blockquote>
+              <div>
+                <h4 className="font-semibold text-sm md:text-base text-black dark:text-white">
+                  {item.name}
+                </h4>
+                <p className="text-xs text-gray-500">{item.position}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import TimelineItemProps from "@/types/timeline";
 
 export const TimelineItem = ({
@@ -10,29 +9,31 @@ export const TimelineItem = ({
   description,
 }: TimelineItemProps) => {
   return (
-    <div className="grid grid-cols-5 gap-4 items-center px-10 py-6">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center px-4 md:px-10 py-6 border-b">
       {/* Year */}
-      <div className="col-span-1 flex justify-end">
-        <div className="text-xl font-bold px-4 py-2 rounded">{year}</div>
+      <div className="md:col-span-1 flex md:justify-end">
+        <div className="text-lg md:text-xl font-bold px-4 py-2 rounded bg-gray-100 text-center">
+          {year}
+        </div>
       </div>
 
       {/* Image */}
-      <div className="col-span-2 flex justify-center">
-        <div className="border p-2">
+      <div className="md:col-span-2 flex justify-center">
+        <div className="border p-2 rounded-md w-full max-w-md">
           <Image
             src={imageSrc}
             alt={imageAlt}
             width={400}
             height={250}
-            className="rounded-md w-full max-w-[400px] h-auto"
+            className="rounded-md w-full h-auto object-cover"
           />
         </div>
       </div>
 
-      {/* Description & Button */}
-      <div className="col-span-2 flex flex-col justify-center gap-4">
-        <p className="text-black leading-relaxed">{title}</p>
-        <p className="text-black leading-relaxed">{description}</p>
+      {/* Description */}
+      <div className="md:col-span-2 flex flex-col justify-center gap-2 text-center md:text-left">
+        <p className="font-semibold text-black">{title}</p>
+        <p className="text-sm text-black leading-relaxed">{description}</p>
       </div>
     </div>
   );

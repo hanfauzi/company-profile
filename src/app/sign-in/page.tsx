@@ -19,7 +19,7 @@ const SignIn = () => {
   const { mutateAsync: login, isPending } = useLogin();
 
   return (
-    <main className="container mx-auto">
+    <main className="container mx-auto px-6 md:px-20 py-20 space-y-12">
       <Card className="w-full max-w-sm mx-auto mt-24">
         <Formik
           initialValues={{ email: "", password: "" }}
