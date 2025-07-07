@@ -24,7 +24,7 @@ const BlogCard: FC<BlogCardProps> = ({ blog }) => {
           </div>
         </CardHeader>
         <CardContent className="space-y-2">
-          <h2 className="font-bold text-lg">{blog.title}</h2>
+          <h1 className="font-bold text-lg">{blog.title}</h1>
           <p className="text-sm text-muted-foreground line-clamp-3">
             {blog.description}
           </p>

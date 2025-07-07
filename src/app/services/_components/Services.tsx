@@ -48,11 +48,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="container mx-auto px-6 md:px-20 py-20 space-y-20 font-[Montserrat]">
+    <section className="container mx-auto mt-10 px-6 md:px-20 py-20 space-y-20 font-[Montserrat]">
       <div className="text-center mb-10">
-        <h2 className="text-2xl font-bold">
+        <h1 className="text-2xl font-bold">
           What We Build, We Build With Purpose
-        </h2>
+        </h1>
         <p className="text-muted-foreground mt-2">
           Each service is crafted to bring clarity, efficiency, and long-term
           value.
@@ -60,7 +60,7 @@ const Services = () => {
       </div>
 
       <div className="text-center max-w-2xl mx-auto space-y-4">
-        <h2 className="text-3xl font-bold">Our Core Services</h2>
+        <h1 className="text-3xl font-bold">Our Core Services</h1>
         <p className="text-muted-foreground">
           Reliable, scalable, and tailored for your business — here&apos;s what
           we offer.
@@ -70,7 +70,7 @@ const Services = () => {
       <div className="grid md:grid-cols-2 gap-10">
         {services.map((service, idx) => (
           <div key={idx} className="border rounded-xl p-6 space-y-4">
-            <h3 className="text-xl font-semibold">{service.title}</h3>
+            <h1 className="text-xl font-semibold">{service.title}</h1>
             <p className="text-sm text-gray-700">{service.description}</p>
 
             <div>

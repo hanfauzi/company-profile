@@ -1,6 +1,5 @@
-import Image from "next/image";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 
 const Footer = () => {
@@ -18,7 +17,7 @@ const Footer = () => {
         <div className="flex flex-row  justify-between md:justify-end gap-6 w-full md:w-auto">
           <nav className="flex items-center">
             <Link href="/aboutus">
-              <Button variant="link" className="text-[#393E46]">
+              <Button variant="link" className="text-[#393E46] cursor-pointer">
                 About us
               </Button>
             </Link>
@@ -26,7 +25,7 @@ const Footer = () => {
           <nav className="flex items-center">
             <Link href="/services">
               {" "}
-              <Button variant="link" className="text-[#393E46]">
+              <Button variant="link" className="text-[#393E46] cursor-pointer">
                 Services
               </Button>{" "}
             </Link>
@@ -34,7 +33,7 @@ const Footer = () => {
           <nav className="flex  items-center ">
             <Link href="/">
               {" "}
-              <Button variant="link" className="text-[#393E46]">
+              <Button variant="link" className="text-[#393E46] cursor-pointer">
                 Contact{" "}
               </Button>
             </Link>

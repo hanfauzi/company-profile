@@ -36,9 +36,9 @@ const TeamsPage = async () => {
   const team = await getTeamMembers();
 
   return (
-    <section className="container font-[Montserrat] text-[#393E46] mx-auto px-6 md:px-20 py-20 space-y-12">
+    <section className="container font-[Montserrat] text-[#393E46] mx-auto px-6 md:px-20 py-20 space-y-12 mt-10">
       <div className="text-center max-w-2xl mx-auto space-y-4">
-        <h2 className="text-3xl font-bold">Meet the People Behind ARUNIKA</h2>
+        <h1 className="text-3xl font-bold">Meet the People Behind ARUNIKA</h1>
         <p className="text-muted-foreground">
           Our team combines technical expertise, creativity, and dedication to deliver meaningful results.
         </p>
@@ -58,9 +58,9 @@ const TeamsPage = async () => {
                 alt={member.name.first}
                 className="w-24 h-24 rounded-full mb-4 object-cover shadow"
               />
-              <h4 className="text-lg font-semibold">
+              <h1 className="text-lg font-semibold">
                 {member.name.first} {member.name.last}
-              </h4>
+              </h1>
               <p className="text-sm text-gray-500 italic">{title}</p>
               <p className="text-sm mt-1 text-muted-foreground">{description}</p>
               <p className="text-xs text-gray-400 mt-2">

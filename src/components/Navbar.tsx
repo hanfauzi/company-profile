@@ -34,47 +34,47 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-3">
           <Link href="/">
-            <Button variant="link" className="text-[#393E46]">
+            <Button variant="link"  className="text-[#393E46] cursor-pointer">
               Home
             </Button>
           </Link>
           <Link href="/aboutus">
-            <Button variant="link" className="text-[#393E46]">
+            <Button variant="link" className="text-[#393E46] cursor-pointer">
               About Us
             </Button>
           </Link>
           <Link href="/services">
-            <Button variant="link" className="text-[#393E46]">
+            <Button variant="link" className="text-[#393E46] cursor-pointer">
               Services
             </Button>
           </Link>
           <Link href="/teams">
-            <Button variant="link" className="text-[#393E46]">
+            <Button variant="link" className="text-[#393E46] cursor-pointer">
               Teams
             </Button>
           </Link>
           <Link href="/contactus">
-            <Button variant="link" className="text-[#393E46]">
+            <Button variant="link" className="text-[#393E46] cursor-pointer">
               Contact Us
             </Button>
           </Link>
           <Link href="/blogs">
             {" "}
-            <Button variant="link" className="text-[#393E46]">
+            <Button variant="link" className="text-[#393E46] cursor-pointer">
               Blog List
             </Button>
           </Link>
           {user ? (
             <>
-              <Link href="/write"><Button variant="link" className="text-[#393E46]">Write</Button></Link>
-              <Button variant="destructive" onClick={clearAuth}>
+              <Link href="/write"><Button variant="link" className="text-[#393E46] cursor-pointer">Write</Button></Link>
+              <Button variant="destructive" onClick={clearAuth} className="cursor-pointer">
                 Logout
               </Button>
             </>
           ) : (
             <>
-              <Link href="/sign-in"><Button variant="link" className="text-[#393E46]">Sign In</Button></Link>
-              <Link href="/sign-up"><Button variant="link" className="text-[#393E46]">Sign Up</Button></Link>
+              <Link href="/sign-in"><Button variant="link" className="text-[#393E46] cursor-pointer">Sign In</Button></Link>
+              <Link href="/sign-up"><Button variant="link" className="text-[#393E46] cursor-pointer">Sign Up</Button></Link>
             </>
           )}
         </div>

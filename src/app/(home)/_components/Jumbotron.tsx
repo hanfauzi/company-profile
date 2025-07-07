@@ -23,11 +23,11 @@ const Jumbotron = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <Link href="/services">
-              <Button className="w-full md:w-auto bg-[#393E46]">View Our Services</Button>
+              <Button className="w-full md:w-auto bg-[#393E46] cursor-pointer">View Our Services</Button>
             </Link>
             <Link href="/aboutus">
-              <Button className="w-full md:w-auto" variant="outline">
-                Learn More
+              <Button className="w-full cursor-pointer md:w-auto" variant="outline" >
+                Learn More About Our Company
               </Button>
             </Link>
           </div>

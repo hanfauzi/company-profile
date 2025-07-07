@@ -14,10 +14,10 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="container font-[Montserrat] text-[#393E46] mx-auto px-6 md:px-20 py-20 space-y-16">
+    <section className="container mt-10 font-[Montserrat] min-h-screen text-[#393E46] mx-auto px-6 md:px-20 py-20 space-y-16">
       {/* Header */}
       <div className="text-center space-y-2">
-        <h2 className="text-3xl font-bold">Contact Us</h2>
+        <h1 className="text-3xl font-bold">Contact Us</h1>
         <p className="text-muted-foreground">
           We're here to help and answer any questions you might have.
         </p>
@@ -32,7 +32,7 @@ const ContactPage = () => {
             onClick={() => handleCopy("hello@arunika.id", "Email")}
             className="cursor-pointer border rounded-xl p-6 bg-[#F0F0F0] hover:bg-[#e0e0e0] transition text-center md:text-left"
           >
-            <h3 className="text-lg font-semibold">Email Us</h3>
+            <h1 className="text-lg font-semibold">Email Us</h1>
             <p className="text-sm text-muted-foreground mt-1">
               hello@arunika.id
             </p>
@@ -46,7 +46,7 @@ const ContactPage = () => {
             onClick={() => handleCopy("+62 812 3456 7890", "WhatsApp Number")}
             className="cursor-pointer border rounded-xl p-6 bg-[#F0F0F0] hover:bg-[#e0e0e0] transition text-center md:text-left"
           >
-            <h3 className="text-lg font-semibold">WhatsApp</h3>
+            <h1 className="text-lg font-semibold">WhatsApp</h1>
             <p className="text-sm text-muted-foreground mt-1">
               +62 812 3456 7890
             </p>
@@ -58,7 +58,7 @@ const ContactPage = () => {
 
         {/* Right Side */}
         <div className="border rounded-xl p-6 bg-[#F0F0F0] space-y-2 text-center md:text-left">
-          <h3 className="text-lg font-semibold">Our Office</h3>
+          <h1 className="text-lg font-semibold">Our Office</h1>
           <p className="text-sm text-muted-foreground">
             Jl. Kemang Raya No. 88A<br />
             Jakarta Selatan, DKI Jakarta<br />

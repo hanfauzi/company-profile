@@ -11,7 +11,7 @@ const BlogDetail = async ({
   const objectId = (await params).objectId;
 
   return (
-    <main className="container font-[Montserrat] text-[#393E46] mx-auto px-6 md:px-20 py-20 space-y-20 ">
+    <main className="container font-[Montserrat] mt-10 text-[#393E46] mx-auto px-6 md:px-20 py-20 space-y-20 ">
       <Suspense fallback={<Loading />}>
         <BlogHeader objectId={objectId} />
         <BlogBody objectId={objectId} />

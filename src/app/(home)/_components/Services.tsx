@@ -35,7 +35,7 @@ const Services = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Mobile Title & Desc */}
         <div className="block md:hidden">
-          <h3 className="text-xl font-bold">Our Core Services</h3>
+          <h1 className="text-xl font-bold">Our Core Services</h1>
           <p className="text-sm text-gray-600 mt-2">
             What we deliver to drive your digital growth.
           </p>
@@ -43,7 +43,7 @@ const Services = () => {
 
         {/* Desktop Title & Desc (sticky) */}
         <div className="hidden md:block sticky top-20 self-start">
-          <h3 className="text-2xl font-bold">Our Core Services</h3>
+          <h1 className="text-2xl font-bold">Our Core Services</h1>
           <p className="text-base text-gray-600 mt-2">
             What we deliver to drive your digital growth.
           </p>
@@ -53,9 +53,9 @@ const Services = () => {
         <div className="grid gap-6">
           {servicesData.map((service, idx) => (
             <div key={idx} className="border rounded-xl p-6">
-              <h4 className="font-semibold text-base md:text-lg">
+              <h1 className="font-semibold text-base md:text-lg">
                 {service.title}
-              </h4>
+              </h1>
               <p className="text-sm mt-2 text-gray-700">{service.description}</p>
             </div>
           ))}
@@ -65,7 +65,7 @@ const Services = () => {
       {/* Call to Action Button */}
       <div className="mt-8 text-left">
         <Link href="/services">
-          <Button className="bg-[#393E46]">Learn More About Our Services</Button>
+          <Button className="bg-[#393E46] cursor-pointer">Learn More About Our Services</Button>
         </Link>
       </div>
     </section>

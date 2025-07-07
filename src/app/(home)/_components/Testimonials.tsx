@@ -43,7 +43,7 @@ const Testimonials = () => {
       <div className="flex flex-col gap-10">
         {/* Title & Subtitle */}
         <div>
-          <h3 className="text-xl md:text-2xl font-bold">Our Testimonials</h3>
+          <h1 className="text-xl md:text-2xl font-bold">Our Testimonials</h1>
           <p className="text-sm md:text-base text-gray-600 mt-2">
             What Our Clients Say About Working with ARUNIKA.
           </p>
@@ -60,9 +60,9 @@ const Testimonials = () => {
                 “{item.feedback}”
               </blockquote>
               <div>
-                <h4 className="font-semibold text-sm md:text-base text-black dark:text-white">
+                <h1 className="font-semibold text-sm md:text-base text-black dark:text-white">
                   {item.name}
-                </h4>
+                </h1>
                 <p className="text-xs text-gray-500">{item.position}</p>
               </div>
             </li>

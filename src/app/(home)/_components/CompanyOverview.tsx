@@ -51,9 +51,9 @@ const CompanyOverview = () => {
       <div className="flex flex-col gap-16 md:gap-20">
         {/* Overview */}
         <div>
-          <h3 className="text-xl md:text-2xl font-bold">
+          <h1 className="text-xl md:text-2xl font-bold">
             A Brief Snapshot of Who We Are.
-          </h3>
+          </h1>
           <p className="mt-4 text-sm md:text-base text-gray-700">
             ARUNIKA is a technology consulting company based in Indonesia,
             committed to helping businesses transform through innovative and
@@ -65,7 +65,7 @@ const CompanyOverview = () => {
 
         {/* Timeline */}
         <div>
-          <h3 className="text-xl md:text-2xl font-bold">Our Milestones</h3>
+          <h1 className="text-xl md:text-2xl font-bold">Our Milestones</h1>
           <p className="text-gray-600 text-sm md:text-base mt-2">
             A journey of growth, innovation, and impact.
           </p>
@@ -80,7 +80,7 @@ const CompanyOverview = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
   {/* Mobile Title & Desc (only visible on small screens) */}
   <div className="block md:hidden">
-    <h3 className="text-xl font-bold">Our Core Values</h3>
+    <h1 className="text-xl font-bold">Our Core Values</h1>
     <p className="text-sm text-gray-600 mt-2">
       What we stand for as a company.
     </p>
@@ -111,7 +111,7 @@ const CompanyOverview = () => {
       },
     ].map((value, idx) => (
       <div key={idx} className="border rounded-xl p-6">
-        <h4 className="font-semibold text-base md:text-lg">{value.title}</h4>
+        <h1 className="font-semibold text-base md:text-lg">{value.title}</h1>
         <p className="text-sm mt-2 text-gray-700">{value.desc}</p>
       </div>
     ))}
@@ -119,7 +119,7 @@ const CompanyOverview = () => {
 
   {/* Desktop Title & Desc (only visible on md+) */}
   <div className="hidden md:block md:sticky md:top-20 self-start">
-    <h3 className="text-2xl font-bold">Our Core Values</h3>
+    <h1 className="text-2xl font-bold">Our Core Values</h1>
     <p className="text-base text-gray-600 mt-2">
       What we stand for as a company.
     </p>

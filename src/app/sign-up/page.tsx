@@ -26,7 +26,7 @@ const SignUp = () => {
   const { mutateAsync: register, isPending } = useRegister();
 
   return (
-    <main className="container mx-auto px-6 h-[83vh] md:px-20 py-20 space-y-12 font-[Montserrat]">
+    <main className="container mx-auto px-6 min-h-screen md:px-20 py-20 space-y-12 font-[Montserrat]">
       <Card className="w-full max-w-sm mx-auto mt-24 text-[#393E46] border rounded-2xl">
         <Formik
           initialValues={{ name: "", email: "", password: "" }}
@@ -94,7 +94,7 @@ const SignUp = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="w-full bg-[#393E46] " disabled={isPending}>
+              <Button type="submit" className="w-full bg-[#393E46] cursor-pointer " disabled={isPending}>
                 {isPending ? <Wrench className="animate-spin" /> : "Register"}
               </Button>
             </CardFooter>
