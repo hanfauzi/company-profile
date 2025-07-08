@@ -36,7 +36,6 @@ const SignIn = () => {
             </CardHeader>
             <CardContent>
               <div className="flex flex-col gap-6">
-                {/* EMAIL */}
                 <div className="grid gap-2">
                   <Label htmlFor="email">Email</Label>
                   <Field
@@ -52,7 +51,6 @@ const SignIn = () => {
                   />
                 </div>
 
-                {/* PASSWORD */}
                 <div className="grid gap-2">
                   <Label htmlFor="password">Password</Label>
                   <Field
@@ -70,7 +68,11 @@ const SignIn = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="w-full bg-[#393E46] cursor-pointer" disabled={isPending}>
+              <Button
+                type="submit"
+                className="w-full bg-[#393E46] cursor-pointer"
+                disabled={isPending}
+              >
                 {isPending ? <Loader className="animate-spin" /> : "Login"}
               </Button>
             </CardFooter>

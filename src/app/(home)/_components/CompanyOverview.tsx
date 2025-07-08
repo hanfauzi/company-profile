@@ -49,7 +49,6 @@ const CompanyOverview = () => {
   return (
     <section className="container  mx-auto px-6 md:px-20 py-16 md:py-[20vh] font-[Montserrat]">
       <div className="flex flex-col gap-16 md:gap-20">
-        {/* Overview */}
         <div>
           <h1 className="text-xl md:text-2xl font-bold">
             A Brief Snapshot of Who We Are.
@@ -63,7 +62,6 @@ const CompanyOverview = () => {
           </p>
         </div>
 
-        {/* Timeline */}
         <div>
           <h1 className="text-xl md:text-2xl font-bold">Our Milestones</h1>
           <p className="text-gray-600 text-sm md:text-base mt-2">
@@ -76,56 +74,53 @@ const CompanyOverview = () => {
           </div>
         </div>
 
-{/* Values Section */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-  {/* Mobile Title & Desc (only visible on small screens) */}
-  <div className="block md:hidden">
-    <h1 className="text-xl font-bold">Our Core Values</h1>
-    <p className="text-sm text-gray-600 mt-2">
-      What we stand for as a company.
-    </p>
-  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="block md:hidden">
+            <h1 className="text-xl font-bold">Our Core Values</h1>
+            <p className="text-sm text-gray-600 mt-2">
+              What we stand for as a company.
+            </p>
+          </div>
 
-  {/* Value Boxes (Left) */}
-  <div className="grid gap-6">
-    {[
-      {
-        title: "Integrity First",
-        desc: "We believe in doing the right thing — always. We maintain transparency and honesty in all aspects of our work.",
-      },
-      {
-        title: "Client-Centric Approach",
-        desc: "Our clients' success is our mission. Every solution we build is aligned with their goals and challenges.",
-      },
-      {
-        title: "Innovation Driven",
-        desc: "We are passionate about leveraging the latest technology to build smart, sustainable solutions.",
-      },
-      {
-        title: "Collaboration Over Competition",
-        desc: "We grow together through open communication, mutual respect, and teamwork — internally and with clients.",
-      },
-      {
-        title: "Continuous Learning",
-        desc: "The tech world evolves fast — and so do we. We encourage curiosity, upskilling, and a growth mindset at every level.",
-      },
-    ].map((value, idx) => (
-      <div key={idx} className="border rounded-xl p-6">
-        <h1 className="font-semibold text-base md:text-lg">{value.title}</h1>
-        <p className="text-sm mt-2 text-gray-700">{value.desc}</p>
-      </div>
-    ))}
-  </div>
+          <div className="grid gap-6">
+            {[
+              {
+                title: "Integrity First",
+                desc: "We believe in doing the right thing — always. We maintain transparency and honesty in all aspects of our work.",
+              },
+              {
+                title: "Client-Centric Approach",
+                desc: "Our clients' success is our mission. Every solution we build is aligned with their goals and challenges.",
+              },
+              {
+                title: "Innovation Driven",
+                desc: "We are passionate about leveraging the latest technology to build smart, sustainable solutions.",
+              },
+              {
+                title: "Collaboration Over Competition",
+                desc: "We grow together through open communication, mutual respect, and teamwork — internally and with clients.",
+              },
+              {
+                title: "Continuous Learning",
+                desc: "The tech world evolves fast — and so do we. We encourage curiosity, upskilling, and a growth mindset at every level.",
+              },
+            ].map((value, idx) => (
+              <div key={idx} className="border rounded-xl p-6">
+                <h1 className="font-semibold text-base md:text-lg">
+                  {value.title}
+                </h1>
+                <p className="text-sm mt-2 text-gray-700">{value.desc}</p>
+              </div>
+            ))}
+          </div>
 
-  {/* Desktop Title & Desc (only visible on md+) */}
-  <div className="hidden md:block md:sticky md:top-20 self-start">
-    <h1 className="text-2xl font-bold">Our Core Values</h1>
-    <p className="text-base text-gray-600 mt-2">
-      What we stand for as a company.
-    </p>
-  </div>
-</div>
-
+          <div className="hidden md:block md:sticky md:top-20 self-start">
+            <h1 className="text-2xl font-bold">Our Core Values</h1>
+            <p className="text-base text-gray-600 mt-2">
+              What we stand for as a company.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

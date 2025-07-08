@@ -3,7 +3,7 @@
 import useGetBlogs from "../_hooks/useGetBlogs";
 import BlogCard from "./BlogCard";
 import BlogCardSkeleton from "./BlogCardSkeleton";
-import { Input } from "@/components/ui/input"; // pastikan kamu punya ini
+import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 const BlogList = () => {
@@ -19,7 +19,6 @@ const BlogList = () => {
 
   return (
     <section className="space-y-6">
-      {/* Search bar */}
       <div className="flex justify-center">
         <Input
           type="text"
@@ -30,7 +29,6 @@ const BlogList = () => {
         />
       </div>
 
-      {/* Blog list */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {isPending && <BlogCardSkeleton count={3} />}
 

@@ -33,7 +33,6 @@ const Services = () => {
   return (
     <section className="container mx-auto py-16 md:py-[20vh] px-6 md:px-20 font-[Montserrat]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Mobile Title & Desc */}
         <div className="block md:hidden">
           <h1 className="text-xl font-bold">Our Core Services</h1>
           <p className="text-sm text-gray-600 mt-2">
@@ -41,7 +40,6 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Desktop Title & Desc (sticky) */}
         <div className="hidden md:block sticky top-20 self-start">
           <h1 className="text-2xl font-bold">Our Core Services</h1>
           <p className="text-base text-gray-600 mt-2">
@@ -49,23 +47,25 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Service Cards */}
         <div className="grid gap-6">
           {servicesData.map((service, idx) => (
             <div key={idx} className="border rounded-xl p-6">
               <h1 className="font-semibold text-base md:text-lg">
                 {service.title}
               </h1>
-              <p className="text-sm mt-2 text-gray-700">{service.description}</p>
+              <p className="text-sm mt-2 text-gray-700">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Call to Action Button */}
       <div className="mt-8 text-left">
         <Link href="/services">
-          <Button className="bg-[#393E46] cursor-pointer">Learn More About Our Services</Button>
+          <Button className="bg-[#393E46] cursor-pointer">
+            Learn More About Our Services
+          </Button>
         </Link>
       </div>
     </section>

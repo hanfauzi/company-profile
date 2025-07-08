@@ -1,4 +1,3 @@
-// SSR: Fetch user data from randomuser.me
 const getTeamMembers = async () => {
   const res = await fetch("https://randomuser.me/api/?results=6&nat=us");
   const data = await res.json();
@@ -8,11 +7,13 @@ const getTeamMembers = async () => {
 const roles = [
   {
     title: "Chief Executive Officer (CEO)",
-    description: "Leads the overall strategic vision and direction of the company.",
+    description:
+      "Leads the overall strategic vision and direction of the company.",
   },
   {
     title: "Chief Technology Officer (CTO)",
-    description: "Oversees all technical aspects and ensures technological growth.",
+    description:
+      "Oversees all technical aspects and ensures technological growth.",
   },
   {
     title: "Lead Software Engineer",
@@ -28,7 +29,8 @@ const roles = [
   },
   {
     title: "Business Analyst",
-    description: "Identifies business needs and bridges communication with tech teams.",
+    description:
+      "Identifies business needs and bridges communication with tech teams.",
   },
 ];
 
@@ -40,7 +42,8 @@ const TeamsPage = async () => {
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h1 className="text-3xl font-bold">Meet the People Behind ARUNIKA</h1>
         <p className="text-muted-foreground">
-          Our team combines technical expertise, creativity, and dedication to deliver meaningful results.
+          Our team combines technical expertise, creativity, and dedication to
+          deliver meaningful results.
         </p>
       </div>
 
@@ -62,7 +65,9 @@ const TeamsPage = async () => {
                 {member.name.first} {member.name.last}
               </h1>
               <p className="text-sm text-gray-500 italic">{title}</p>
-              <p className="text-sm mt-1 text-muted-foreground">{description}</p>
+              <p className="text-sm mt-1 text-muted-foreground">
+                {description}
+              </p>
               <p className="text-xs text-gray-400 mt-2">
                 Based in {member.location.city}, {member.nat}
               </p>

@@ -41,7 +41,6 @@ const Testimonials = () => {
   return (
     <section className="container mx-auto py-16 md:py-[20vh] px-6 md:px-20 font-[Montserrat]">
       <div className="flex flex-col gap-10">
-        {/* Title & Subtitle */}
         <div>
           <h1 className="text-xl md:text-2xl font-bold">Our Testimonials</h1>
           <p className="text-sm md:text-base text-gray-600 mt-2">
@@ -49,7 +48,6 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {testimonials.map((item, i) => (
             <li

@@ -46,8 +46,6 @@ const WriteBlog = () => {
 
   const { mutateAsync: createBlog, isPending } = useCreateBlog();
 
-
-
   return (
     <main className="container mx-auto px-6 md:px-20 py-20 space-y-20 font-[Montserrat] mt-10">
       <Formik
@@ -67,7 +65,6 @@ const WriteBlog = () => {
         {({ setFieldValue }) => (
           <Form className="space-y-4">
             <div className="flex flex-col gap-6">
-              {/* AUTHOR */}
               <div className="grid gap-2">
                 <Label htmlFor="author">Author</Label>
                 <Field
@@ -82,7 +79,7 @@ const WriteBlog = () => {
                   className="text-sm text-red-500"
                 />
               </div>
-              {/* TITLE */}
+
               <div className="grid gap-2">
                 <Label htmlFor="title">Title</Label>
                 <Field
@@ -98,7 +95,6 @@ const WriteBlog = () => {
                 />
               </div>
 
-              {/* CATEGORY */}
               <div className="grid gap-2">
                 <Label htmlFor="category">Category</Label>
                 <Field
@@ -114,7 +110,6 @@ const WriteBlog = () => {
                 />
               </div>
 
-              {/* DESCRIPTION */}
               <div className="grid gap-2">
                 <Label htmlFor="description">Description</Label>
                 <Field
@@ -130,10 +125,8 @@ const WriteBlog = () => {
                 />
               </div>
 
-              {/* CONTENT */}
               <TiptapRichtextEditor label="Content" name="content" />
 
-              {/* THUMBNAIL */}
               {selectedImage ? (
                 <div className="relative w-fit">
                   <Image
@@ -178,8 +171,7 @@ const WriteBlog = () => {
         )}
       </Formik>
     </main>
-  )
-}
-
+  );
+};
 
 export default AuthGuard(WriteBlog);

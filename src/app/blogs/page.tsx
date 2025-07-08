@@ -1,6 +1,5 @@
 import BlogList from "../(home)/_components/BlogList";
 
-// Data dummy atau bisa diganti import dari CMS/API
 const blogs = [
   {
     id: "arunika-next-gen-consulting",
@@ -34,12 +33,12 @@ const BlogListPage = () => {
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h1 className="text-3xl font-bold">Insights & Stories from ARUNIKA</h1>
         <p className="text-muted-foreground">
-          Explore articles, case studies, and ideas from our team of consultants, developers, and designers.
+          Explore articles, case studies, and ideas from our team of
+          consultants, developers, and designers.
         </p>
       </div>
 
-      {/* Panggil komponen BlogList dengan data */}
-      <BlogList  />
+      <BlogList />
     </section>
   );
 };

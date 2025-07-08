@@ -8,7 +8,6 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
-
 const Navbar = () => {
   const { user, clearAuth } = useAuthStore();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,23 +17,20 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full bg-[#00ADB5] text-[#393E46] z-50 shadow ${montserrat.className}`}
     >
       <div className="container mx-auto p-4 flex justify-between items-center">
-        {/* Logo */}
         <Link href="/">
-  <Image
-    src="/companylogo.png"
-    alt="Company Logo"
-    width={500}
-    height={50}
-    priority
-    className="absolute h-40 w-40 top-[-46] left-1 md:left-4 md:top-[-45]"
-  />
-</Link>
+          <Image
+            src="/companylogo.png"
+            alt="Company Logo"
+            width={500}
+            height={50}
+            priority
+            className="absolute h-40 w-40 top-[-46] left-1 md:left-4 md:top-[-45]"
+          />
+        </Link>
 
-
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-3">
           <Link href="/">
-            <Button variant="link"  className="text-[#393E46] cursor-pointer">
+            <Button variant="link" className="text-[#393E46] cursor-pointer">
               Home
             </Button>
           </Link>
@@ -66,20 +62,44 @@ const Navbar = () => {
           </Link>
           {user ? (
             <>
-              <Link href="/write"><Button variant="link" className="text-[#393E46] cursor-pointer">Write</Button></Link>
-              <Button variant="destructive" onClick={clearAuth} className="cursor-pointer">
+              <Link href="/write">
+                <Button
+                  variant="link"
+                  className="text-[#393E46] cursor-pointer"
+                >
+                  Write
+                </Button>
+              </Link>
+              <Button
+                variant="destructive"
+                onClick={clearAuth}
+                className="cursor-pointer"
+              >
                 Logout
               </Button>
             </>
           ) : (
             <>
-              <Link href="/sign-in"><Button variant="link" className="text-[#393E46] cursor-pointer">Sign In</Button></Link>
-              <Link href="/sign-up"><Button variant="link" className="text-[#393E46] cursor-pointer">Sign Up</Button></Link>
+              <Link href="/sign-in">
+                <Button
+                  variant="link"
+                  className="text-[#393E46] cursor-pointer"
+                >
+                  Sign In
+                </Button>
+              </Link>
+              <Link href="/sign-up">
+                <Button
+                  variant="link"
+                  className="text-[#393E46] cursor-pointer"
+                >
+                  Sign Up
+                </Button>
+              </Link>
             </>
           )}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -88,7 +108,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden flex flex-col bg-white px-6 py-4 space-y-4 shadow-lg">
           <Link href="/" onClick={() => setMenuOpen(false)}>
